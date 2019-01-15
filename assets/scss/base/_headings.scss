@@ -1,0 +1,93 @@
+// Styleguide Base.Headers
+
+/* Dependencies (at least):
+    Variables.Colors
+    Variables.Global
+    Variables.Typography
+    Variables.Breakpoints
+    Functions.Media-queries
+*/
+
+/*
+    Use the following headers to give titles SEO weight.
+
+    H1 - Page or Article title
+    H2 - Chapter of an article
+    H3 - Sub-chapter of an article
+    H4 - Sidebar widget titles (and article sub-sub-titles)
+    H5 - Footer widget titles (and sidebar sub-titles)
+    H6 - Footer sub-titles
+
+    use .h* classes to style an element to LOOK like another header but not give it different SEO weight or keep it's current weight.
+    VIZ: <span class="h3">Looks like a h3 but is not weighted as one.</span>
+*/
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: color(font-color-header);
+    font-feature-settings: 'liga' 1;
+    font-family: $font-family-header;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: $font-weight-black;
+}
+
+h1,
+.h1 {
+    font-size: $font-size-huge;
+
+    @include phone-down {
+        font-size: $font-size-largest;
+    }
+}
+
+h2,
+.h2 {
+    font-size: $font-size-largest;
+
+    @include phone-down {
+        font-size: $font-size-large;
+    }
+}
+
+h3,
+.h3 {
+    font-size: $font-size-larger;
+
+    @include phone-down {
+        font-size: $font-size-medium;
+    }
+}
+
+h4,
+.h4 {
+    font-size: $font-size-medium;
+}
+
+h5,
+.h5 {
+    font-size: $font-size-small;
+}
+
+h6,
+.h6 {
+    font-size: $font-size-smaller;
+}

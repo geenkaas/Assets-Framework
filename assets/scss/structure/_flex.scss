@@ -1,0 +1,88 @@
+// Styleguide Components.Flex
+
+/* Dependencies (at least):
+    Variables.Global
+    Variables.Breakpoints
+    Functions.Media-queries
+    Functions.Mixins
+*/
+
+// NB this is going to need some work and will eventually replace gelleries and grids.
+
+.s-flex {
+    display: flex;
+    width: 100%;
+}
+
+.s-flex--left {
+    justify-content: start;
+
+    & > .s-flex__item {
+        flex: 0 0 auto;
+    }
+}
+
+.s-flex--leftright {
+    align-items: center;
+    justify-content: space-between;
+
+    & > .s-flex__item {
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+}
+
+.s-flex--equal {
+    justify-content: space-between;
+
+    & > .s-flex__item {
+        width: 100%;
+
+        &:last-child {
+            margin-right: 0;
+            text-align: right;
+        }
+    }
+}
+
+.s-flex--gallery {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > .s-flex__item {
+        flex: 0 0 auto;
+    }
+}
+
+// Chose or add your divisions for galleries, leave out those which are not used (for example a 2,4,8 set)
+$gallery-split: 2,3,4;
+
+@each $division in $gallery-split {
+    .s-flex--gallery-#{$division} {
+        & > .s-flex__item {
+            @include gallery(#{$division}, #{$margin-small});
+        }
+    }
+}
+
+.s-flex--gallery {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > .s-flex__item {
+        flex: 0 0 auto;
+    }
+}
+
+// Chose or add your divisions for galleries, leave out those which are not used (for example a 2,4,8 set)
+$gallery-split: 3,4;
+
+@each $division in $gallery-split {
+    .s-flex--gallery-#{$division} {
+        & > .s-flex__item {
+            @include gallery(#{$division}, #{$margin-small});
+        }
+    }
+}

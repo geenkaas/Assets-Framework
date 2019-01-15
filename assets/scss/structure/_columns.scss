@@ -1,0 +1,59 @@
+// Styleguide Structure.Columns
+
+/* Dependencies (at least):
+    Variables.Global
+    Functions.Mixins
+*/
+
+// Columns
+//
+// These classes hook into the CSS Columns property: A pinterest style list of objects dividen into a newspaper-like set of columns
+// For a good article about columns see: https://css-tricks.com/guide-responsive-friendly-css-columns/
+//
+// Markup
+/*
+<div class="s-columns s-columns--three">
+    <div class="s-columns">
+        Item
+    </div>
+    <div class="s-columns__column">
+        Item
+    </div>
+    <div class="s-columns__column">
+        Item
+    </div>
+    <div class="s-columns__column">
+        Item
+    </div>
+    <div class="s-columns__column">
+        Item
+    </div>
+    <div class="s-columns__column">
+        Item
+    </div>
+</div>
+*/
+// Styleguide Structure.Columns
+
+$column-width: 240px;
+
+.s-columns {
+    @include margin-bottom;
+    column-gap: $margin-medium;
+}
+
+.s-columns--four {
+    columns: 4 $column-width;
+}
+
+.s-columns--three {
+    columns: 3 $column-width;
+}
+
+.s-columns--two {
+    columns: 2 $column-width;
+}
+
+.s-columns__column {
+    margin-bottom: $margin-smaller;
+}

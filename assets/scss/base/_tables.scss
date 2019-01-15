@@ -1,0 +1,60 @@
+// Styleguide Base.Tables
+
+/* Dependencies (at least):
+    none
+*/
+
+/* Example code
+
+<table>
+    <thead>
+        <tr>
+            <th>header1</th>
+            <th>header2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>row3</td>
+            <td>row4</td>
+        </tr>
+        <tr>
+            <td>row5</td>
+            <td>row6</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>footer1</th>
+            <th>footer2</th>
+        </tr>
+    </tfoot>
+</table>
+
+*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    thead {
+        tr {
+            th {
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+            }
+        }
+    }
+
+    tfoot {
+        tr {
+            td {
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+// Styleguide Variables.Global
+
+/* Dependencies (at least):
+    none
+*/
+
+// Margins
+    $margin-base: 5;
+
+    $margin-smallest: $margin-base * 1 + 0px;
+    $margin-smaller: $margin-base * 2 + 0px;
+    $margin-small: $margin-base * 3 + 0px;
+    $margin-medium: $margin-base * 4 + 0px;
+    $margin-large: $margin-base * 5 + 0px;
+    $margin-larger: $margin-base * 6 + 0px;
+    $margin-largest: $margin-base * 8 + 0px;
+    $margin-huge: $margin-base * 10 + 0px;
+
+// Icons and button sizes (use an even number)
+    $button-base: 12;
+
+    $button-smaller: $button-base * 1 + 0px;
+    $button-small: $button-base * 1.5 + 0px;
+    $button-medium: $button-base * 2 + 0px;
+    $button-large: $button-base * 2.5 + 0px;
+    $button-larger: $button-base * 3 + 0px;
+
+// Banner formats
+    $ad-skyscraper-width: 160px;
+    $ad-skyscraper-height: 600px;
+    $ad-rectangle-medium: 300px;
+    $ad-rectangle-large: 336px;
+
+    $column-right: $ad-rectangle-large;
+    $column-left: calc(100% - #{$column-right} - #{$margin-medium});
+
+    $content-medium: $breakpoint-larger;
+
+// Structure
+    $header-height-raw: 200;
+    $header-height: $header-height-raw + 0px;
+
+// Component settings
+    $logo-width: 200px;
+
+// Exporting constants to Javascript
+// See: https://blog.bluematador.com/posts/how-to-share-variables-between-js-and-sass/
+    :export {
+        headerHeight: $header-height-raw;
+        marginMedium: $margin-base * 4;
+        siteWidth: 1200;
+    }

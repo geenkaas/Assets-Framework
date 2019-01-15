@@ -1,0 +1,51 @@
+{
+  "name": "base-wordpress-assets",
+  "description": "Wordpress project starter assets",
+  "version": "1.2.0",
+  "author": "Arne Maier, Robin van Vuure, Nino van den Heuvel, Leander Huysse, Sanne Schaap",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack/dev.config.js",
+    "prod": "npm run clean && NODE_ENV=production webpack -p --config webpack/prod.config.js",
+    "clean": "rimraf ./dist/*"
+  },
+  "engines": {
+    "node": ">8.11.2 <10.6.0"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "jquery": "^3.3.1",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.7.2",
+    "rimraf": "^2.6.0",
+    "sass-loader": "^6.0.7",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack-merge": "^4.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "cssnano": "^4.1.4",
+    "expose-loader": "^0.7.5",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-discard-comments": "^4.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.0.10",
+    "postcss-scss": "^2.0.0",
+    "terser-webpack-plugin": "^1.1.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-serve": "^2.0.2"
+  }
+}

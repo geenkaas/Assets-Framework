@@ -1,0 +1,89 @@
+// Styleguide Functions.Media-queries
+
+/* Dependencies (at least):
+    Variables.Breakpoints
+*/
+
+// Media queries with custom breakpoints, examples and visual aid
+
+/*
+
+        Phones      Tablet     Desktop    Widescreen    Full-HD
+                V           V           V           V
+Breakpoints:  small       medium      large       larger
+Pixels:        600         900         1200        1800
+
+                <---------------------------------tablet-up->
+                            <--------------------desktop-up->
+                                        <-----widescreen-up->
+
+                <-tablet-only->
+                <-tablet-to-desktop---->
+                            <-desktop-only->
+
+<--phone-down-->
+<--tablet-down------------->
+<--desktop-down------------------------>
+
+Markup example:
+
+.element {
+    padding: 20px;
+
+    @include tablet-down {
+        padding: 10px;
+    }
+}
+
+*/
+
+// Media query Mixins, all queries are inclusive (tablet-up means tablet AND up)
+// NB phone up is everything so omited
+// From a certain point up:
+
+@mixin tablet-up {
+    @media (min-width: $breakpoint-small) { @content; }
+}
+@mixin desktop-up {
+    @media (min-width: $breakpoint-medium) { @content; }
+}
+@mixin widescreen-up {
+    @media (min-width: $breakpoint-large) { @content; }
+}
+@mixin fullhd-up {
+    @media (min-width: $breakpoint-larger) { @content; }
+}
+
+// Device only breakpoints
+@mixin tablet-only {
+    @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) { @content; }
+}
+@mixin desktop-only {
+    @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) { @content; }
+}
+
+// Between two breakpoints
+@mixin tablet-to-desktop {
+    @media (min-width: $breakpoint-small) and (max-width: $breakpoint-large) { @content; }
+}
+
+// Up to a certain breakpoint, leaving out only larger screens.
+// Tiny- and smaller-down are exceptions to specifically target older phones such as iPhone SE (tiny)
+@mixin tiny-down {
+    @media (max-width: $breakpoint-smallest - 1) { @content; }
+}
+@mixin smaller-down {
+    @media (max-width: $breakpoint-smaller - 1) { @content; }
+}
+@mixin phone-down {
+    @media (max-width: $breakpoint-small - 1) { @content; }
+}
+@mixin tablet-down {
+    @media (max-width: $breakpoint-medium - 1) { @content; }
+}
+@mixin desktop-down {
+    @media (max-width: $breakpoint-large - 1) { @content; }
+}
+@mixin widescreen-down {
+    @media (max-width: $breakpoint-larger - 1) { @content; }
+}

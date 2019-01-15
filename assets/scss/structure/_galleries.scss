@@ -1,0 +1,74 @@
+// Styleguide Structure.Galleries
+
+/* Dependencies (at least):
+    Variables.Global
+    Variables.Breakpoints
+    Functions.Media-queries
+    Functions.Mixins
+*/
+
+// Dependencies: Variables.Breakpoints, Functions.Mediaqueries, Functions.Mixins
+
+// Galleries
+//
+// These classes form a gallery: a block of elements that are repeated for as many elements as are included. Rows wrap when the set number is reached
+// Typically you'll want to use a `<div class="s-gallery">` wrapping any number `<div class="s-gallery__column">` elements.
+//
+// Markup
+/*
+    <div class="s-gallery s-gallery--4">
+        <div class="s-gallery__column">
+            Item
+        </div>
+        <div class="s-gallery__column">
+            Item
+        </div>
+        <div class="s-gallery__column">
+            Item
+        </div>
+        <div class="s-gallery__column">
+            Item
+        </div>
+        <div class="s-gallery__column">
+            Item
+        </div>
+        <div class="s-gallery__column">
+            Item
+        </div>
+    </div>
+*/
+// Styleguide Structure.Gallery
+
+.s-gallery {
+    @include clearfix;
+    @include margin-bottom;
+}
+
+.s-gallery__column {
+    float: left;
+    margin-right: $margin-medium;
+    width: 100%;
+}
+
+// Chose or add your divisions for galleries, leave out those which are not used (for example a 2,4,8 set)
+$gallery-divisions: 2,3;
+
+@each $grid in $gallery-divisions {
+    .s-gallery--#{$grid} .s-gallery__column {
+        @include split(1,#{$grid});
+        &:nth-of-type(#{$grid}n) {
+            margin-right: 0;
+        }
+        &:nth-of-type(#{$grid}n + 1) {
+            clear: both;
+        }
+    }
+
+}
+
+@include phone-down {
+    .s-gallery .s-gallery__column {
+        margin-right: 0;
+        width: 100%;
+    }
+}

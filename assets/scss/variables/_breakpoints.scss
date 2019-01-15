@@ -1,0 +1,39 @@
+// Styleguide Variables.Breakpoints
+
+/* Dependencies (at least):
+    none
+*/
+
+// These are constant breakpoints, and are division points between "groups" of devices, not an indication of a device size.
+// For example breakpoint 600 splits mobile phones (below 600) and tablets (above 600).
+// Do not use these breakpoints directly for media queries, instead use mixins from functions/mixins.scss
+// For toggling content (like a hamburger menu icon) use the toggle-utility classes in base/utility.scss
+// See: https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions
+
+// Note: Breakpoints sit between "groups" of screen sizes. In the comments are those groups.
+
+// (320) iPhone 4,5,SE + zoomed
+
+$breakpoint-smallest: 350px;
+
+// (375) iPhone 6,7,8,X, XS
+
+$breakpoint-smaller: 400px;
+
+// (414) iPhone XR and XS max
+
+$breakpoint-small: 600px;
+
+// (768) Portrait tablets
+
+$breakpoint-medium: 900px;
+
+// (1024) Landscape tablets and smaller desktop PC's
+
+$breakpoint-large: 1200px;
+
+// (1440) Wide screen monitors and bigger laptops
+
+$breakpoint-larger: 1800px;
+
+// (1920) Full HD and 4K screens

@@ -1,0 +1,149 @@
+// Styleguide Variables.Colors
+
+/* Dependencies (at least):
+    Functions.Functions
+*/
+
+// Colour variables
+//
+// Define your raw colours (with HEX values) and your application colours such as link and header colours.
+//
+// Markup:
+// None: Just define all colours with a descriptive name
+//
+// Styleguide Variables.Colors.Raw
+
+// List all main colours by name (example colours given, adjust and complete with your project needs)
+
+    $red: #d11822;
+    $orange: #f17c2d;
+    $yellow: #fdcf6b;
+    $green: #80c57d;
+    $teal: #7dc5be;
+    $blue: #7d8cc5;
+    $purple: #7f14e3;
+    $pink: #e3147e;
+
+// Optionally assign primary and secondary colours with deratives for easy allocation in the variable function.
+    $primary: $purple;
+    $primary-20: rgba($primary, 0.2);
+    $primary-50: rgba($primary, 0.5);
+    $primary-dark: darken($primary, 50);
+    $primary-light: lighten($primary, 50);
+
+    $secondary: $blue;
+    $secondary-20: rgba($secondary, 0.2);
+    $secondary-50: rgba($secondary, 0.5);
+    $secondary-dark: darken($secondary, 50);
+    $secondary-light: lighten($secondary, 40);
+
+// 11 shades of grey
+// Default set of opinionated grey values.
+// Keep naming consistent (lightest, lighter, light, medium, dark, darker, darkest, etc.)
+    $black: #000;
+    $grey-black: #1a1a1a;
+    $grey-darkest: #404040;
+    $grey-darker: #666;
+    $grey-dark: #737373;
+    $grey-medium: #808080;
+    $grey-light: #999;
+    $grey-lighter: #c0c0c0;
+    $grey-lightest: #e6e6e6;
+    $grey-white: #f3f3f3;
+    $white: #fff;
+
+// Transparent colours
+// Add colours and variables as you need, keep naming consistent
+    $black-90: rgba($black,0.9);
+    $black-80: rgba($black,0.8);
+    $black-60: rgba($black,0.6);
+    $black-50: rgba($black,0.5);
+    $black-30: rgba($black,0.3);
+    $black-10: rgba($black,0.1);
+    $black-trans: rgba($black,0);
+
+    $grey-50: rgba($grey-medium,0.5);
+
+    $white-50: rgba($white,0.5);
+    $white-30: rgba($white,0.3);
+
+    $white-trans: rgba($white,0);
+
+// Text colours
+    $font-color-dark: $black-90;
+    $font-color-medium: $black-80;
+    $font-color-light: $black-60;
+
+// Social media and brand colours
+    $facebook: #365397;
+    $twitter: #00a9f1;
+    $linkedin: #006db3;
+    $youtube: #ff3333;
+    $pinterest: #ce1a19;
+    $instagram: #396d9a;
+
+/* Colour implementations
+
+This is an array with all your colour variants
+- Using the function should be the only way colours can be added to components unless:
+- Only use direct variables if there is only one instance.
+- Group variables for a better overview
+- The $colors must only contain colour names for a specific purpose, so not `red: $red`, but `modal-warning: $red`
+- Use the following hierarchy setup: Element-Variant-Property-Status (ex: input-textarea-border-hover)
+
+Examples:
+a {
+    color: color(link);
+}
+
+c-modal--warning {
+    background-color: color(modal-warning);
+}
+
+c-icon--facebook {
+    fill: $facebook;
+}
+
+*/
+
+// Styleguide Variables.Colors.Implementations
+
+$colors: (
+    body-background: $white,
+    body-color: $font-color-medium,
+
+    font-color-dark: $font-color-dark,
+    font-color-medium: $font-color-medium,
+    font-color-light: $font-color-light,
+    font-color-header: $secondary,
+
+    selection-background: $primary,
+    selection-color: $white,
+
+    link: $primary,
+    link-hover: $secondary,
+
+    line-color: $black-50,
+
+    modal-error: $red,
+    modal-warning: $orange,
+    modal-information: $yellow,
+    modal-success: $green,
+    modal-notice: $blue,
+
+    placeholder-color: $black-30,
+
+    input-background: $white,
+    input-background-focus: $black-10,
+    input-text: $grey-darker,
+    input-border: $grey-light,
+    input-border-focus: $grey-medium,
+
+    button-background: $grey-light,
+    button-border: $grey-medium,
+    button-text: $grey-darkest,
+    button-hover-background: $grey-medium,
+    button-hover-text: $white,
+    button-disabled-background: $grey-lightest,
+    button-disabled-text: $grey-medium,
+);

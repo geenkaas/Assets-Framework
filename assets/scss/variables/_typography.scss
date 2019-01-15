@@ -1,0 +1,42 @@
+// Styleguide Variables.Typography
+
+/* Dependencies (at least):
+    none
+*/
+
+// Text sizes
+    // https://css-tricks.com/snippets/sass/correctly-adding-unit-number/
+    // Set this to a number around 16 that displays sharply with your chosen font
+    $font-size-base: 16;
+
+    // opinionated alternatives that render sharply
+    $font-size-smallest: $font-size-base - 3px;
+    $font-size-smaller: $font-size-base - 2px;
+    $font-size-small: $font-size-base - 1px;
+    $font-size-medium: $font-size-base + 0px;
+    $font-size-large: $font-size-base + 3px;
+    $font-size-larger: $font-size-base + 6px;
+    $font-size-largest: $font-size-base + 9px;
+    $font-size-huge: $font-size-base + 15px;
+
+// Default line height
+    $line-height-base: 1.4;
+    $line-height-small: $line-height-base - 0.2;
+    $line-height-medium: $line-height-base + 0;
+    $line-height-large: $line-height-base + 0.2;
+
+// Font families
+// See: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack/
+    $font-family-body: Helmet, Freesans, sans-serif;
+    $font-family-header: 'REPLACE', Helmet, Freesans, sans-serif;
+
+// Font weights (needs to be set per font, cannot be used blindly)
+    $font-weight-thin: 100;
+    $font-weight-extra-light: 200;
+    $font-weight-light: 300;
+    $font-weight-regular: 400;
+    $font-weight-medium: 500;
+    $font-weight-semi-bold: 600;
+    $font-weight-bold: 700;
+    $font-weight-extra-bold: 800;
+    $font-weight-black: 900;

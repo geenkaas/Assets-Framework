@@ -1,0 +1,15 @@
+// Styleguide Base.Links
+
+/* Dependencies (at least):
+    Variables.Colors
+*/
+
+a {
+    color: color(link);
+    text-decoration: none;
+
+    &:hover {
+        color: color(link-hover);
+        text-decoration: underline;
+    }
+}

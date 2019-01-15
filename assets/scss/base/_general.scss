@@ -1,0 +1,37 @@
+// Styleguide Base.General
+
+/* Dependencies (at least):
+    Variables.Colors
+*/
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    color: color(body-color);
+    position: relative;
+}
+
+body {
+    background: color(body-background);
+    margin: 0;
+    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    outline: 0;
+}
+
+::selection {
+    background: color(selection-background);
+    color: color(selection-color);
+    text-shadow: none;
+}

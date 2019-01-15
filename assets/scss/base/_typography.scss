@@ -1,0 +1,42 @@
+// Styleguide Base.Typography
+
+/* Dependencies (at least):
+    Variables.Colors
+    Variables.Global
+    Variables.Typography
+*/
+
+html {
+    font-family: $font-family-body;
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+    -webkit-text-size-adjust: 100%;
+}
+
+p {
+    margin: 1em 0;
+}
+
+hr {
+    @include margin-bottom;
+    border: none;
+    border-top: 1px solid $secondary-20;
+    margin-top: 0;
+}
+
+code,
+q {
+    @include margin-bottom;
+    background: $black-10;
+    display: inline-block;
+    padding: 0 $margin-smallest;
+}
+
+pre {
+    @include margin-bottom;
+}
+
+pre > code {
+    padding: 0 $margin-large $margin-medium;
+    width: 100%;
+}
